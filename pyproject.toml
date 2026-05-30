@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailpulse-server"
+version = "1.0.0"
+description = "Lightweight email server health monitoring and diagnostics CLI tool"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "SOLO Agent", email = "solo-agent@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: System :: Monitoring",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0.0",
+    "dnspython>=2.4.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+mailpulse = "mailpulse.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mailpulse-server"
+Documentation = "https://github.com/yourusername/mailpulse-server#readme"
+Repository = "https://github.com/yourusername/mailpulse-server"
+Issues = "https://github.com/yourusername/mailpulse-server/issues"
